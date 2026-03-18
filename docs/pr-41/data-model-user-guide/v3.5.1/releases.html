@@ -62,13 +62,13 @@
                 release/v3.5.0
               </option>
             
-              <option value="releases.html"
-                      selected>
+              <option value="../v3.5.1/releases.html"
+                      >
                 release/v3.5.1
               </option>
             
-              <option value="../v4.0.0/releases.html"
-                      >
+              <option value="releases.html"
+                      selected>
                 release/v4.0.0
               </option>
             
@@ -109,8 +109,10 @@
 <li class="toctree-l1"><a class="reference internal" href="tro_modelling_key_concepts.html">TRO-Modelling Key Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_tour_of_the_data_model.html">A Tour of the Data Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="what_is_a_full_dtro_record.html">What is a ‘Full’ D-TRO Record?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validation.html">Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the_data_model_uml_class_diagrams.html">The Data Model UML Class Diagrams</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upversioning.html">Upversioning</a></li>
 </ul>
 </div>
       
@@ -118,6 +120,7 @@
   <div class="local-toc">
     <ul>
 <li><a class="reference internal" href="#">Releases</a><ul>
+<li><a class="reference internal" href="#st-march-2026">31st March 2026</a></li>
 <li><a class="reference internal" href="#th-january-2026">9th January 2026</a></li>
 <li><a class="reference internal" href="#th-november-2025">27th November 2025</a></li>
 <li><a class="reference internal" href="#id1">18th November 2025</a></li>
@@ -141,6 +144,18 @@
       <section id="releases">
 <h1>Releases<a class="headerlink" href="#releases" title="Link to this heading">¶</a></h1>
 <p>This section provides details of releases that include changes to the data model.</p>
+<section id="st-march-2026">
+<h2>31st March 2026<a class="headerlink" href="#st-march-2026" title="Link to this heading">¶</a></h2>
+<p>Release <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<p>On 31st March 2026 we released <code class="docutils literal notranslate"><span class="pre">v4.0.0</span></code> of the Data Model. This major release includes the following changes.</p>
+<ul class="simple">
+<li><p>restructured how <code class="docutils literal notranslate"><span class="pre">condition</span></code>, <code class="docutils literal notranslate"><span class="pre">conditions</span></code> and <code class="docutils literal notranslate"><span class="pre">conditionSet</span></code> objects are represented in the Data Model. This is a breaking change and payloads will need to be updated to reflect these changes. For more information please see <a class="reference internal" href="a_tour_of_the_data_model.html#condition-information"><span class="std std-ref">About Conditions and Exclusions</span></a>.</p></li>
+<li><p>added validation logic to <code class="docutils literal notranslate"><span class="pre">externalReference.lastUpdateDate</span></code> to ensure date is not in the future</p></li>
+<li><p>added validation logic to <code class="docutils literal notranslate"><span class="pre">rateLine.durationStart</span></code> and <code class="docutils literal notranslate"><span class="pre">rateLine.durationEnd</span></code> to ensure start date is before end date</p></li>
+<li><p>added <code class="docutils literal notranslate"><span class="pre">minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">maximum</span></code> and <code class="docutils literal notranslate"><span class="pre">multipleOf</span></code> constraints to <code class="docutils literal notranslate"><span class="pre">heaviestAxleWeight</span></code>, <code class="docutils literal notranslate"><span class="pre">grossVehicleWeight</span></code>, <code class="docutils literal notranslate"><span class="pre">vehicleHeight</span></code>, <code class="docutils literal notranslate"><span class="pre">vehicleLength</span></code> and <code class="docutils literal notranslate"><span class="pre">vehicleWidth</span></code> vehicle characteristics</p></li>
+<li><p>enforced value of <code class="docutils literal notranslate"><span class="pre">Europe/London</span></code> for <code class="docutils literal notranslate"><span class="pre">regulation.timeZone</span></code></p></li>
+</ul>
+</section>
 <section id="th-january-2026">
 <h2>9th January 2026<a class="headerlink" href="#th-january-2026" title="Link to this heading">¶</a></h2>
 <p>Release <code class="docutils literal notranslate"><span class="pre">35d03c05aeeb43d38d3fa0285af6c14c</span></code></p>
