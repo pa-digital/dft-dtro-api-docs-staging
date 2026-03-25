@@ -214,10 +214,10 @@
 </div>
 <p>Note the SWA-like codes follow the SWA codes published for Street Works, see Geoplace SWA codes. In D-TRO, leading zeros are removed.</p>
 <figure class="align-center" id="id5">
-<span id="fig6"></span><a class="reference internal image-reference" href="_images/fig6.png"><img alt="Enumeration values for sourceActionType" src="_images/fig6.png" style="width: 45%;" />
+<span id="fig6"></span><a class="reference internal image-reference" href="_images/sourceActionType.png"><img alt="Enumeration values for sourceActionType" src="_images/sourceActionType.png" style="width: 45%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 6 </span><span class="caption-text">Enumeration values for sourceActionType</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">Enumeration values for <code class="docutils literal notranslate"><span class="pre">sourceActionType</span></code></span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The <code class="docutils literal notranslate"><span class="pre">actionType</span></code> attribute specifies the type of action being taken with respect to a specific version of a D-TRO. It is used to indicate how the current version relates to any earlier version(s) of the same Traffic Regulation Order. The data type is a string constrained to a defined set of controlled vocabulary values. This attribute is mandatory and must be provided exactly once.</p>
@@ -228,6 +228,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">errorFix</span></code> - Indicates that the current version corrects one or more errors present in an earlier version.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">amendment</span></code> - A general indicator that the current version introduces amendments to a prior version, where the specific nature of amendment (full or partial) is not further detailed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">informationUpdate</span></code> - Indicates an update to planned start and end date/times, for a Made record – no other information changes should be made.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullRevoke</span></code> - Indicates that entire order is being revoked.</p></li>
 </ul>
 <p>This classification allows systems and users to track the evolution of legal traffic regulations and their current applicability in a structured and machine-readable way.</p>
 <p>We then move on to the <code class="docutils literal notranslate"><span class="pre">provision</span></code> object. Provisions are an important concept - each instance of <code class="docutils literal notranslate"><span class="pre">provision</span></code> represents specifically one type of regulation, subject to one set of homogeneous conditions (conditions, exemptions, and times of applicability, and, if applicable, tariff rates), that are relevant to one or several regulatedPlace(s).</p>
@@ -487,29 +488,33 @@
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscCycleParking</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscFootwayClosure</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscFootpathClosure</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscLaneClosure</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscFootwayClosure</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscPedestrianZone</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscLaneClosure</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscPROWClosure</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscPedestrianZone</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscRoadClosure</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscPROWClosure</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscRoadClosureCrossingPoint</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscRoadClosure</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfBusway</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscRoadClosureCrossingPoint</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfOneWay</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfBusway</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfParkingRestriction</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfOneWay</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfWeightRestriction</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfParkingRestriction</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscTemporaryParkingBay</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscSuspensionOfWeightRestriction</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscTemporaryParkingRestriction</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">miscTemporaryParkingBay</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">miscTemporaryParkingRestriction</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">motorVehiclesProhibited</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">movementOrderNoOvertaking</span></code></p></td>
 </tr>
@@ -522,8 +527,6 @@
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nonOrderKerbsidePedestrianCrossing</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nonOrderMovementBoxJunction</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">publicRightOfWayClosure</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -976,34 +979,11 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <p>When specific activation dates and time starts and stops are foreseen, the times and dates given in the <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> sub-model represent when the TRO and its provisions are foreseen to be activated. These updates can be provided by submission of a D-TRO record, with an <code class="docutils literal notranslate"><span class="pre">orderReportingPointType</span></code> = <code class="docutils literal notranslate"><span class="pre">informationUpdate</span></code>, after the submission of a D-TRO record, with a Made status.</p>
 <p>For permanent TROs the end attribute may be omitted.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> model allows intermittent or variable patterns of time applicability for TRO regulations to be specified.</p>
-<p><a class="reference internal" href="#fig-max-stay-no-return"><span class="std std-numref">Figure 37</span></a> provides the UML class representaion of the <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object.</p>
 <figure class="align-center" id="id38">
-<span id="fig-max-stay-no-return"></span><a class="reference internal image-reference" href="_images/max-stay-no-return.png"><img alt="UML model representation of the maxStayNoReturn object" src="_images/max-stay-no-return.png" style="width: 45%;" />
-</a>
-<figcaption>
-<p><span class="caption-number">Figure 37 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object</span><a class="headerlink" href="#id38" title="Link to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>The <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object specifies conditions concerning the maximum duration for occupancy and the minimum time to be able to return to the same occupancy zone.</p>
-<ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">maximumOccupancy</span></code> attribute refers to the maximum occupancy duration permitted</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">minimumPeriodForReturn</span></code> attribute referes to the minimum time duration between previous occupancy and the next occupancy within a defined zone</p></li>
-</ul>
-<p><a class="reference internal" href="#fig37"><span class="std std-numref">Figure 38</span></a> shows the UML class representation of the period object but also note the two links at the top of the figure, which allow instances of the period object to be specified either as a valid period (i.e., an included period) or an exception period (i.e., an excluded period where the regulation is not applicable).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is a matter of data quality and integrity on behalf of the data supplier to ensure the dates and times and periods of applicability are complete, consistent and coherent – there is nothing in the Data Model, per se, that stops contradictory or conflicting information being specified. Data suppliers should take appropriate steps to ensure the quality of the data supplied.</p>
-</div>
-<p>The overall <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> period defined by the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> properties in the <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> object shall strictly bound (i.e. override) any periods defined in the period object.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Where an invalid (exception) period overlaps (intersects) a valid period the validity shall be regarded as invalid.</p>
-</div>
-<figure class="align-center" id="id39">
 <span id="fig37"></span><a class="reference internal image-reference" href="_images/period.png"><img alt="UML model representation of the period object" src="_images/period.png" style="width: 45%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 38 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">period</span></code> object</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 37 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">period</span></code> object</span><a class="headerlink" href="#id38" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Each instance of <code class="docutils literal notranslate"><span class="pre">period</span></code> may have a given <code class="docutils literal notranslate"><span class="pre">periodName</span></code> and also may have specified date times indicating the <code class="docutils literal notranslate"><span class="pre">startOfPeriod</span></code> and <code class="docutils literal notranslate"><span class="pre">endOfPeriod</span></code>. If the <code class="docutils literal notranslate"><span class="pre">startOfPeriod</span></code> or the <code class="docutils literal notranslate"><span class="pre">endOfPeriod</span></code> are unspecified the date times of the related <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> object instance may bound applicability.</p>
@@ -1014,9 +994,32 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 </div>
 <p>The optional attribute <code class="docutils literal notranslate"><span class="pre">recurringPeriod</span></code>, if populated, indicates that the <code class="docutils literal notranslate"><span class="pre">startOfPeriod</span></code> and <code class="docutils literal notranslate"><span class="pre">endOfPeriod</span></code> attributes are considered to define the first instance of a recurring period. The attribute <code class="docutils literal notranslate"><span class="pre">recurringPeriod</span></code> defines the duration between the start of instances of recurring periods. The <code class="docutils literal notranslate"><span class="pre">recurrents</span></code> attribute is optional and can define a number of repetitions if required - this is not typically the case of permanent regulations.</p>
 <p>To support use cases where the start and ends of recurring periods are defined by a changeable date (such as Good Friday, or Easter), the use of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code> object and its children allow changeable dates to be defined, and these will overide the <code class="docutils literal notranslate"><span class="pre">startOfPeriod</span></code> and <code class="docutils literal notranslate"><span class="pre">endOfPeriod</span></code> attributes.</p>
-<p><a class="reference internal" href="#fig38"><span class="std std-numref">Figure 39</span></a> provides the UML class representation of the timePeriodOfDay object.</p>
+<p><a class="reference internal" href="#fig-max-stay-no-return"><span class="std std-numref">Figure 38</span></a> provides the UML class representaion of the <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object.</p>
+<figure class="align-center" id="id39">
+<span id="fig-max-stay-no-return"></span><a class="reference internal image-reference" href="_images/max-stay-no-return.png"><img alt="UML model representation of the maxStayNoReturn object" src="_images/max-stay-no-return.png" style="width: 45%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 38 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">maxStayNoReturn</span></code> object specifies conditions concerning the maximum duration for occupancy and the minimum time to be able to return to the same occupancy zone.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">maximumOccupancy</span></code> attribute refers to the maximum occupancy duration permitted</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">minimumPeriodForReturn</span></code> attribute referes to the minimum time duration between previous occupancy and the next occupancy within a defined zone</p></li>
+</ul>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">fig38</span></code> shows the UML class representation of the period object but also note the two links at the top of the figure, which allow instances of the period object to be specified either as a valid period (i.e., an included period) or an exception period (i.e., an excluded period where the regulation is not applicable).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is a matter of data quality and integrity on behalf of the data supplier to ensure the dates and times and periods of applicability are complete, consistent and coherent – there is nothing in the Data Model, per se, that stops contradictory or conflicting information being specified. Data suppliers should take appropriate steps to ensure the quality of the data supplied.</p>
+</div>
+<p>The overall <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> period defined by the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> properties in the <code class="docutils literal notranslate"><span class="pre">timeValidity</span></code> object shall strictly bound (i.e. override) any periods defined in the period object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Where an invalid (exception) period overlaps (intersects) a valid period the validity shall be regarded as invalid.</p>
+</div>
+<p><a class="reference internal" href="#fig39"><span class="std std-numref">Figure 39</span></a> provides the UML class representation of the timePeriodOfDay object.</p>
 <figure class="align-center" id="id40">
-<span id="fig38"></span><a class="reference internal image-reference" href="_images/time-period-of-day.png"><img alt="UML model representation of the timePeriodOfDay object" src="_images/time-period-of-day.png" style="width: 45%;" />
+<span id="fig39"></span><a class="reference internal image-reference" href="_images/time-period-of-day.png"><img alt="UML model representation of the timePeriodOfDay object" src="_images/time-period-of-day.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 39 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">timePeriodOfDay</span></code> object</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
@@ -1026,9 +1029,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <p>In the example given above, the first instance of the <code class="docutils literal notranslate"><span class="pre">timePeriodOfDay</span></code> object contains the attribute <code class="docutils literal notranslate"><span class="pre">startTimeOfPeriod</span></code> with the value 07:00am (07:00:00) and the attribute <code class="docutils literal notranslate"><span class="pre">endTimeOfPeriod</span></code> with the value 09:30am (09:30:00). The second instance of the <code class="docutils literal notranslate"><span class="pre">timePeriodOfDay</span></code> object contains the attribute <code class="docutils literal notranslate"><span class="pre">startTimeOfPeriod</span></code> with the value 4:00pm (16:00:00) and the attribute <code class="docutils literal notranslate"><span class="pre">endTimeOfPeriod</span></code> with the value 6:30pm (18:30:00).</p>
 <p>This addresses the local challenge of daylight saving time changes, but should be taken into account when factoring into time-zone based systems.</p>
 <p>The value of <code class="docutils literal notranslate"><span class="pre">startTimeOfPeriod</span></code> must fall before the value of <code class="docutils literal notranslate"><span class="pre">endTimeOfPeriod</span></code> within a one-day period.</p>
-<p><a class="reference internal" href="#fig39"><span class="std std-numref">Figure 40</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">dayWeekMonth</span></code> Object. This object and its associated specialisation (<code class="docutils literal notranslate"><span class="pre">calendarWeekInMonth</span></code>, <code class="docutils literal notranslate"><span class="pre">weekOfMonth</span></code>, and <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code>) enable identification of patterns of days, weeks and months.</p>
+<p><a class="reference internal" href="#fig40"><span class="std std-numref">Figure 40</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">dayWeekMonth</span></code> Object. This object and its associated specialisation (<code class="docutils literal notranslate"><span class="pre">calendarWeekInMonth</span></code>, <code class="docutils literal notranslate"><span class="pre">weekOfMonth</span></code>, and <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code>) enable identification of patterns of days, weeks and months.</p>
 <figure class="align-center" id="id41">
-<span id="fig39"></span><a class="reference internal image-reference" href="_images/day-week-month.png"><img alt="UML model representation of the dayWeekMonth Object" src="_images/day-week-month.png" style="width: 45%;" />
+<span id="fig40"></span><a class="reference internal image-reference" href="_images/day-week-month.png"><img alt="UML model representation of the dayWeekMonth Object" src="_images/day-week-month.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 40 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">dayWeekMonth</span></code> Object</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
@@ -1042,9 +1045,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">applicableMonth</span></code> attribute indicates months of the year to be included. The attribute may be used between zero and 12 times, with each attribute instance being a unique month of the year. Permitted values are ‘january’, ‘february’, etc.</p></li>
 </ul>
-<p><a class="reference internal" href="#fig40"><span class="std std-numref">Figure 41</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">calendarWeekInMonth</span></code> Object. This object enables specification of calendar weeks within a month to be included. See ISO-8601 for further details. The first calendar week contains the first of the month, with the calendar week starting on a Monday. Several days of the first week of the month may occur in the previous calendar month. By construction, the last week of a preceding month can also be the first week of a subsequent month.</p>
+<p><a class="reference internal" href="#fig41"><span class="std std-numref">Figure 41</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">calendarWeekInMonth</span></code> Object. This object enables specification of calendar weeks within a month to be included. See ISO-8601 for further details. The first calendar week contains the first of the month, with the calendar week starting on a Monday. Several days of the first week of the month may occur in the previous calendar month. By construction, the last week of a preceding month can also be the first week of a subsequent month.</p>
 <figure class="align-center" id="id42">
-<span id="fig40"></span><a class="reference internal image-reference" href="_images/calendar-week-in-month.png"><img alt="UML model representation of the calendarWeekInMonth object" src="_images/calendar-week-in-month.png" style="width: 45%;" />
+<span id="fig41"></span><a class="reference internal image-reference" href="_images/calendar-week-in-month.png"><img alt="UML model representation of the calendarWeekInMonth object" src="_images/calendar-week-in-month.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 41 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">calendarWeekInMonth</span></code> object</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
@@ -1054,9 +1057,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">weekInMonth</span></code> attribute indicates the Calendar week of the month to be included. The attribute shall be used between one and 6 times, with each attribute instance being a unique Calendar week in month identifier. Permitted values are ‘firstWeekofMonth’, ‘secondWeekOfMonth’ … to ‘sixthWeekOfMonth’.</p></li>
 </ul>
-<p><a class="reference internal" href="#fig41"><span class="std std-numref">Figure 42</span></a> provides the UML class representation of the weekOfMonth object. The weekOfMonth object provides information concerning an identifiable week in a calendar month – where the week starts on the same day of the week as the month. E.g., if the first of the month is a Wednesday, each week in a month identified here also starts on a Wednesday.</p>
+<p><a class="reference internal" href="#fig42"><span class="std std-numref">Figure 42</span></a> provides the UML class representation of the weekOfMonth object. The weekOfMonth object provides information concerning an identifiable week in a calendar month – where the week starts on the same day of the week as the month. E.g., if the first of the month is a Wednesday, each week in a month identified here also starts on a Wednesday.</p>
 <figure class="align-center" id="id43">
-<span id="fig41"></span><a class="reference internal image-reference" href="_images/week-of-month.png"><img alt="UML model representation of the weekOfMonth object" src="_images/week-of-month.png" style="width: 45%;" />
+<span id="fig42"></span><a class="reference internal image-reference" href="_images/week-of-month.png"><img alt="UML model representation of the weekOfMonth object" src="_images/week-of-month.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 42 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">weekOfMonth</span></code> object</span><a class="headerlink" href="#id43" title="Link to this image">¶</a></p>
@@ -1066,9 +1069,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">applicableWeek</span></code> attribute indicates the week of the month to be included. The attribute shall be used between one and 5 times, with each attribute instance being a unique week in month identifier. Permitted values are ‘firstWeek’, ‘secondWeek’ … to ‘fifthWeek’.</p></li>
 </ul>
-<p><a class="reference internal" href="#fig42"><span class="std std-numref">Figure 43</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code> object. The <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code> object enables identification of instances of a day of the week in a month; for example, the second Tuesday in the month. When using this object, at least one <code class="docutils literal notranslate"><span class="pre">applicableDay</span></code> instance shall be specified in the related object <code class="docutils literal notranslate"><span class="pre">dayWeekMonth</span></code>.</p>
+<p><a class="reference internal" href="#fig43"><span class="std std-numref">Figure 43</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code> object. The <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code> object enables identification of instances of a day of the week in a month; for example, the second Tuesday in the month. When using this object, at least one <code class="docutils literal notranslate"><span class="pre">applicableDay</span></code> instance shall be specified in the related object <code class="docutils literal notranslate"><span class="pre">dayWeekMonth</span></code>.</p>
 <figure class="align-center" id="id44">
-<span id="fig42"></span><a class="reference internal image-reference" href="_images/instance-of-day-within-month.png"><img alt="UML model representation of the instanceOfDayWithinMonth object" src="_images/instance-of-day-within-month.png" style="width: 45%;" />
+<span id="fig43"></span><a class="reference internal image-reference" href="_images/instance-of-day-within-month.png"><img alt="UML model representation of the instanceOfDayWithinMonth object" src="_images/instance-of-day-within-month.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 43 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">instanceOfDayWithinMonth</span></code> object</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
@@ -1078,9 +1081,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">applicableInstanceOfDayWithinMonth</span></code> attribute indicates the identified day instance within the month to be included. The attribute shall be used between one and 5 times, with each attribute instance of an identified day in a month. Permitted values are ‘firstInstance’, ‘secondInstance’ … to ‘fifthInstance’. This can be used to define patterns such as the second and fourth Tuesday and Friday in the month.</p></li>
 </ul>
-<p><a class="reference internal" href="#fig43"><span class="std std-numref">Figure 44</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object. The <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object indicates the characteristics of an identified (special) day.</p>
+<p><a class="reference internal" href="#fig44"><span class="std std-numref">Figure 44</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object. The <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object indicates the characteristics of an identified (special) day.</p>
 <figure class="align-center" id="id45">
-<span id="fig43"></span><a class="reference internal image-reference" href="_images/special-day.png"><img alt="UML model representation of the specialDay object" src="_images/special-day.png" style="width: 45%;" />
+<span id="fig44"></span><a class="reference internal image-reference" href="_images/special-day.png"><img alt="UML model representation of the specialDay object" src="_images/special-day.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 44 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
@@ -1092,39 +1095,39 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <li><p>The mandatory <code class="docutils literal notranslate"><span class="pre">specialDayType</span></code> attribute which indicates the type of the special day. Permitted values are defined in the <code class="docutils literal notranslate"><span class="pre">specialDayType</span></code> enumeration list. Values include: ‘easter’, ‘marketDay’, ‘matchDay’, ‘publicHoliday’ etc.</p></li>
 <li><p>The optional <code class="docutils literal notranslate"><span class="pre">publicEvent</span></code> attribute which indicates what type of public event is associated with this <code class="docutils literal notranslate"><span class="pre">specialDay</span></code>. Permitted values are defined in the extensive <code class="docutils literal notranslate"><span class="pre">publicEventType</span></code> enumeration list. Values include: ‘agriculturalShow’, ‘airShow, ‘artEvent’, etc.</p></li>
 </ul>
-<p><a class="reference internal" href="#fig44"><span class="std std-numref">Figure 45</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">publicHoliday</span></code> object. The object publicHoliday with its mandatory attribute <code class="docutils literal notranslate"><span class="pre">publicHolidayName</span></code> enables the public holiday to be named.</p>
+<p><a class="reference internal" href="#fig45"><span class="std std-numref">Figure 45</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">publicHoliday</span></code> object. The object publicHoliday with its mandatory attribute <code class="docutils literal notranslate"><span class="pre">publicHolidayName</span></code> enables the public holiday to be named.</p>
 <figure class="align-center" id="id46">
-<span id="fig44"></span><a class="reference internal image-reference" href="_images/public-holiday.png"><img alt="UML model representation of the publicHoliday object" src="_images/public-holiday.png" style="width: 45%;" />
+<span id="fig45"></span><a class="reference internal image-reference" href="_images/public-holiday.png"><img alt="UML model representation of the publicHoliday object" src="_images/public-holiday.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 45 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">publicHoliday</span></code> object</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#fig45"><span class="std std-numref">Figure 46</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code> object.</p>
+<p><a class="reference internal" href="#fig46"><span class="std std-numref">Figure 46</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code> object.</p>
 <figure class="align-center" id="id47">
-<span id="fig45"></span><a class="reference internal image-reference" href="_images/changeable-time-period.png"><img alt="UML model representation of the changeableTimePeriod object" src="_images/changeable-time-period.png" style="width: 45%;" />
+<span id="fig46"></span><a class="reference internal image-reference" href="_images/changeable-time-period.png"><img alt="UML model representation of the changeableTimePeriod object" src="_images/changeable-time-period.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 46 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code> object</span><a class="headerlink" href="#id47" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#fig46"><span class="std std-numref">Figure 47</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object. There is a mirror image object called <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code>. Both objects work in a similar manner. A ‘fuzzy time’ period is defined in several European standards as the time period with non-precise characteristics. However, this is actually a poor definition for the concept. The actual concept is a time qualification that is not fixed and may be variable in nature. The variation may be highly predictable (such as dusk or dawn), or defined by external factors and authorities (such as school terms times in a specific locality). Hence in the D-TRO Data Specification we do not use the term ‘Fuzzy Period’, but rather <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code>.</p>
+<p><a class="reference internal" href="#fig47"><span class="std std-numref">Figure 47</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object. There is a mirror image object called <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code>. Both objects work in a similar manner. A ‘fuzzy time’ period is defined in several European standards as the time period with non-precise characteristics. However, this is actually a poor definition for the concept. The actual concept is a time qualification that is not fixed and may be variable in nature. The variation may be highly predictable (such as dusk or dawn), or defined by external factors and authorities (such as school terms times in a specific locality). Hence in the D-TRO Data Specification we do not use the term ‘Fuzzy Period’, but rather <code class="docutils literal notranslate"><span class="pre">changeableTimePeriod</span></code>.</p>
 <p>Use of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object and/or the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object enable a period to be defined using a variable date time start or end or both.</p>
 <figure class="align-center" id="id48">
-<span id="fig46"></span><a class="reference internal image-reference" href="_images/changeable-time-period-start.png"><img alt="UML model representation of the changeableTimePeriodStart object" src="_images/changeable-time-period-start.png" style="width: 45%;" />
+<span id="fig47"></span><a class="reference internal image-reference" href="_images/changeable-time-period-start.png"><img alt="UML model representation of the changeableTimePeriodStart object" src="_images/changeable-time-period-start.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 47 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object</span><a class="headerlink" href="#id48" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id49">
-<span id="fig47"></span><a class="reference internal image-reference" href="_images/changeable-time-period-end.png"><img alt="UML model representation of the changeableTimePeriodEnd object" src="_images/changeable-time-period-end.png" style="width: 45%;" />
+<span id="fig48"></span><a class="reference internal image-reference" href="_images/changeable-time-period-end.png"><img alt="UML model representation of the changeableTimePeriodEnd object" src="_images/changeable-time-period-end.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 48 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object</span><a class="headerlink" href="#id49" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object (and the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object), shown in <a class="reference internal" href="#fig46"><span class="std std-numref">Figure 47</span></a> and <a class="reference internal" href="#fig47"><span class="std std-numref">Figure 48</span></a> respectively, each has one attribute:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object (and the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object), shown in <a class="reference internal" href="#fig47"><span class="std std-numref">Figure 47</span></a> and <a class="reference internal" href="#fig48"><span class="std std-numref">Figure 48</span></a> respectively, each has one attribute:</p>
 <ul class="simple">
 <li><p>The mandatory <code class="docutils literal notranslate"><span class="pre">startType</span></code> attribute (<code class="docutils literal notranslate"><span class="pre">endType</span></code> for the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object), which indicates the type of characteristic time measure being used. Values include: <code class="docutils literal notranslate"><span class="pre">dawn</span></code>, <code class="docutils literal notranslate"><span class="pre">dusk</span></code>, <code class="docutils literal notranslate"><span class="pre">holiday</span></code>, and <code class="docutils literal notranslate"><span class="pre">external</span></code>.</p></li>
 </ul>
@@ -1134,9 +1137,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <li><p>Use of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEntry</span></code> object or objects gives specific date time value which is associated with a start or stop. Use of several objects can build up a schedule or calender of start entries and/or stop entries.</p></li>
 <li><p>By use of the linkage between a <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodStart</span></code> object and/or <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEnd</span></code> object with the <code class="docutils literal notranslate"><span class="pre">specialDay</span></code> object - i.e. indicating that the start and/or end is a special day (e.g. Easter).</p></li>
 </ul>
-<p><a class="reference internal" href="#fig48"><span class="std std-numref">Figure 49</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodSource</span></code> object.</p>
+<p><a class="reference internal" href="#fig49"><span class="std std-numref">Figure 49</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodSource</span></code> object.</p>
 <figure class="align-center" id="id50">
-<span id="fig48"></span><a class="reference internal image-reference" href="_images/changeable-time-period-source.png"><img alt="UML model representation of the changeableTimePeriodSource object" src="_images/changeable-time-period-source.png" style="width: 45%;" />
+<span id="fig49"></span><a class="reference internal image-reference" href="_images/changeable-time-period-source.png"><img alt="UML model representation of the changeableTimePeriodSource object" src="_images/changeable-time-period-source.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 49 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodSource</span></code> object</span><a class="headerlink" href="#id50" title="Link to this image">¶</a></p>
@@ -1148,9 +1151,9 @@ With the exception of TTROs or a D-TRO where regulatedPlace is represented by a 
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sourceLocator</span></code> attribute is a URI hyperlink providing the accessible location for retrieval of the external data source.</p></li>
 </ul>
 <p>Each instance of <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodSource</span></code> will have a definition to explain the nature of the source of data that provides the accurate timings. E.g. for a changeable time period of school term times, it could be a Government website which shares these dates. The <code class="docutils literal notranslate"><span class="pre">sourceLocator</span></code> will then provide the specific data elements from the hyperlink of the website through the URI.</p>
-<p><a class="reference internal" href="#fig49"><span class="std std-numref">Figure 50</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEntry</span></code> object.</p>
+<p><a class="reference internal" href="#fig50"><span class="std std-numref">Figure 50</span></a> provides the UML class representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEntry</span></code> object.</p>
 <figure class="align-center" id="id51">
-<span id="fig49"></span><a class="reference internal image-reference" href="_images/changeable-time-period-entry.png"><img alt="UML model representation of the changeableTimePeriodEntry object" src="_images/changeable-time-period-entry.png" style="width: 45%;" />
+<span id="fig50"></span><a class="reference internal image-reference" href="_images/changeable-time-period-entry.png"><img alt="UML model representation of the changeableTimePeriodEntry object" src="_images/changeable-time-period-entry.png" style="width: 45%;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 50 </span><span class="caption-text">UML model representation of the <code class="docutils literal notranslate"><span class="pre">changeableTimePeriodEntry</span></code> object</span><a class="headerlink" href="#id51" title="Link to this image">¶</a></p>
